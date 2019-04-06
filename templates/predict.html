@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
      <head>
-                <title>Webpage</title>
+                <title>Prediction Result</title>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
                 <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
     </head>
                 
                 
-   <body >
-        <style type=text/css>
+   <body class="center-wrapper">
+        <style>
             body{
                 background-image: url("static/images/charity.jpg");
             }
+            html, body {height:100%;}
+            html {display:table; width:100%;}
+            body {display:table-cell; text-align:center; padding:200px;}
             </style>   
-       <h1> {{ prediction }}</h1>
+            
+       <h1 ><font face="veranda" color = "red" size = "10"><strong> {{ prediction }}</strong></font></h1>
    </body>
 </html>

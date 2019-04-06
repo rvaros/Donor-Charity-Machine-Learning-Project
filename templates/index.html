@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Webpage</title>
+    <title>Donor Prediction</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
@@ -14,14 +14,14 @@
   html {display:table; width:100%;}
   body {display:table-cell; text-align:center; vertical-align:middle;}
   </style>
-    <h3>Donors Prediction Form</h3>
+    <h3><strong>Donors Prediction Form</strong></h3>
 
 <div class="centered-content">
   <form action="/predict" method="POST">
-    <label for="age">Age</label>
+    <label for="age"><strong>Age</strong></label>
     <input type="text" id="age" name="age">
     <br>
-    <label for="workclass">Work Class</label>
+    <label for="workclass"><strong> Work Class</strong> </label>
     <select id="workclass" name="workclass">
       <option value="0">Federal-gov</option>
       <option value="1">Local-gov</option>
@@ -32,7 +32,7 @@
       <option value="6">Without-pay</option>
     </select>
     <br>
-    <label for="education_level">Education Level</label>
+    <label for="education_level"><strong>Education Level</strong></label>
     <select id="education_level" name="education_level">
       <option value="0">10th</option>
       <option value="1">11th</option>
@@ -52,7 +52,7 @@
       <option value="15">Some-college</option>
     </select>
     <br>
-    <label for="education-num">Education Num</label>
+    <label for="education-num"><strong>Years of Education</strong></label>
     <select id="education-num" name="education-num">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -72,7 +72,7 @@
       <option value="16">16</option>
     </select>    
     <br>
-    <label for="marital-status">Marital Status</label>
+    <label for="marital-status"><strong>Marital Status</strong></label>
     <select id="marital-status" name="marital_stat">
       <option value="0">Divorced</option>
       <option value="1">Married-AF-spouse</option>
@@ -83,7 +83,7 @@
       <option value="6">Seperated</option>  
     </select>
     <br>
-    <label for="occupation">Occupation</label>
+    <label for="occupation"><strong>Occupation</strong></label>
     <select id="occupation" name="occupation">
       <option value="0">Adm-clerical</option>
       <option value="1">Armed-Forces</option>
@@ -101,7 +101,7 @@
       <option value="13">Transport-moving</option>
     </select>
     <br>
-    <label for="race">Race</label>
+    <label for="race"><strong>Race</strong></label>
     <select id="race" name="race">
       <option value="0">Amer-Indian-Eskimo</option>
       <option value="1">Asian-Pac-Islander</option>
@@ -110,22 +110,22 @@
       <option value="4">White</option>
     </select>
     <br>
-    <label for="sex">Sex</label>
+    <label for="sex"><strong>Sex</strong></label>
     <select id="sex" name="sex">
       <option value="0">Female</option>
       <option value="1">Male</option>
     </select>
     <br>
-    <label for="capital-gain">Capital Gain </label>
+    <label for="capital-gain"><strong>Capital Gain</strong> </label>
     <input type="text" id="capital-gain" name="capital-gain">
     <br>
-    <label for="capital-loss">Capital Loss </label>
+    <label for="capital-loss"><strong>Capital Loss</strong> </label>
     <input type="text" id="capital_loss" name="capital_loss">
     <br>
-    <label for="hours-per-week">Hours Per Week </label>
+    <label for="hours-per-week"><strong>Hours Per Week</strong> </label>
     <input type="text" id="hours-per-week" name="hours-per-week">
     <br>
-    <label for="native-country">Native Country</label>
+    <label for="native-country"><strong>Native Country</strong></label>
     <select id="native-country" name="native-country">
       <option value="0">Cambodia</option>
       <option value="1">Canada</option>
