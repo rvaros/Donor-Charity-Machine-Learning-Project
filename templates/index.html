@@ -1,0 +1,209 @@
+<html>
+<head>
+    <title>Donor Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+</head>
+
+<body class="centered-wrapper">
+  <style type=text/css>
+  body{
+      background-image: url("static/images/charity.jpg");
+  }
+  html, body {height:100%;}
+  html {display:table; width:100%;}
+  body {display:table-cell; text-align:center; vertical-align:middle;}
+  </style>
+    <h3><strong>Donors Prediction Form</strong></h3>
+
+<div class="centered-content">
+  <form action="/predict" onsubmit="return myFunction()" method="POST">
+    <label for="age"><strong>Age</strong></label>
+    <input type="text" id="age" name="age">
+    <br>
+    <label for="workclass"><strong> Work Class</strong> </label>
+    <select id="workclass" name="workclass">
+      <option value="0">Federal-gov</option>
+      <option value="1">Local-gov</option>
+      <option value="2">Private</option>
+      <option value="3">Self-emp-inc</option>
+      <option value="4">Self-emp-not-inc</option>
+      <option value="5">State-gov</option>
+      <option value="6">Without-pay</option>
+    </select>
+    <br>
+    <label for="education_level"><strong>Education Level</strong></label>
+    <select id="education_level" name="education_level">
+      <option value="0">10th</option>
+      <option value="1">11th</option>
+      <option value="2">12th</option>
+      <option value="3">1st-4th</option>
+      <option value="4">5th-6th</option>
+      <option value="5">7th-8th</option>
+      <option value="6">9th</option>
+      <option value="7">Assoc-acdm</option>
+      <option value="8">Assoc-voc</option>
+      <option value="9">Bachelors</option>
+      <option value="10">Doctorate</option>
+      <option value="11">HS-grad</option>
+      <option value="12">Masters</option>
+      <option value="13">Preschool</option>
+      <option value="14">Prof-school</option>
+      <option value="15">Some-college</option>
+    </select>
+    <br>
+    <label for="education-num"><strong>Years of Education</strong></label>
+    <select id="education-num" name="education-num">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+    </select>    
+    <br>
+    <label for="marital-status"><strong>Marital Status</strong></label>
+    <select id="marital-status" name="marital_stat">
+      <option value="0">Divorced</option>
+      <option value="1">Married-AF-spouse</option>
+      <option value="2">Married-civ-spouse</option>
+      <option value="3">Married-spouse-absent</option>
+      <option value="4">Never-married</option>
+      <option value="5">Seperated</option>
+      <option value="6">Widowed</option> 
+    </select>
+    <br>
+    <label for="occupation"><strong>Occupation</strong></label>
+    <select id="occupation" name="occupation">
+      <option value="0">Adm-clerical</option>
+      <option value="1">Armed-Forces</option>
+      <option value="2">Craft-repair</option>
+      <option value="3">Exec-managerial</option>
+      <option value="4">Farming-fishing</option>
+      <option value="5">Handlers-cleaners</option>
+      <option value="6">Machine-op-inspct</option>
+      <option value="7">Other-service</option>
+      <option value="8">Priv-house-serv</option>
+      <option value="9">Prof-specialty</option>
+      <option value="10">Protective-serv</option>
+      <option value="11">Sales</option>
+      <option value="12">Tech-support</option>
+      <option value="13">Transport-moving</option>
+    </select>
+    <br>
+    <label for="race"><strong>Race</strong></label>
+    <select id="race" name="race">
+      <option value="0">Amer-Indian-Eskimo</option>
+      <option value="1">Asian-Pac-Islander</option>
+      <option value="2">Black</option>
+      <option value="3">Other</option>
+      <option value="4">White</option>
+    </select>
+    <br>
+    <label for="sex"><strong>Sex</strong></label>
+    <select id="sex" name="sex">
+      <option value="0">Female</option>
+      <option value="1">Male</option>
+    </select>
+    <br>
+    <label for="capital-gain"><strong>Investment Gain</strong> </label>
+    <input type="text" id="capital-gain" name="capital-gain">
+    <br>
+    <label for="capital-loss"><strong>Investment Loss</strong> </label>
+    <input type="text" id="capital_loss" name="capital_loss">
+    <br>
+    <label for="hours-per-week"><strong>Hours Per Week</strong> </label>
+    <input type="text" id="hours-per-week" name="hours-per-week">
+    <br>
+    <label for="native-country"><strong>Native Country</strong></label>
+    <select id="native-country" name="native-country">
+      <option value="0">Cambodia</option>
+      <option value="1">Canada</option>
+      <option value="2">China</option>
+      <option value="3">Columbia</option>
+      <option value="4">Cuba</option>
+      <option value="5">Dominican Republic</option>
+      <option value="6">Ecuador</option>
+      <option value="7">El Salvadorr</option>
+      <option value="8">England</option>
+      <option value="9">France</option>
+      <option value="10">Germany</option>
+      <option value="11">Greece</option>
+      <option value="12">Guatemala</option>
+      <option value="13">Haiti</option>
+      <option value="14">Netherlands</option>
+      <option value="15">Honduras</option>
+      <option value="16">HongKong</option>
+      <option value="17">Hungary</option>
+      <option value="18">India</option>
+      <option value="19">Iran</option>
+      <option value="20">Ireland</option>
+      <option value="21">Italy</option>
+      <option value="22">Jamaica</option>
+      <option value="23">Japan</option>
+      <option value="24">Laos</option>
+      <option value="25">Mexico</option>
+      <option value="26">Nicaragua</option>
+      <option value="27">Outlying-US(Guam-USVI-etc)</option>
+      <option value="28">Peru</option>
+      <option value="29">Philippines</option>
+      <option value="30">Poland</option>
+      <option value="11">Portugal</option>
+      <option value="32">Puerto-Rico</option>
+      <option value="33">Scotland</option>
+      <option value="34">South</option>
+      <option value="35">Taiwan</option>
+      <option value="36">Thailand</option>
+      <option value="37">Trinadad&Tobago</option>
+      <option value="38">United States</option>
+      <option value="39">Vietnam</option>
+      <option value="40">Yugoslavia</option>
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script>
+function myFunction() {
+  var x;
+  var y;
+  var z;
+  var i;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("age").value;
+  y = document.getElementById("capital-gain").value;
+  z = document.getElementById("capital_loss").value;
+  i = document.getElementById("hours-per-week").value;
+  // Set the limitation
+  if (x > 110) {
+    alert("Wrong Age Input, Should be Less than or Equal to 110");
+    return false;
+  }
+  if (y > 41310) {
+    alert("Wrong Investment-Gain Input, Should be Less than or Equal to 41310");
+    return false;
+  }
+  if (z > 4356) {
+    alert("Wrong Investment-Loss Input, Should be Less than or Equal to 4356");
+    return false;
+  }
+  if (i > 99) {
+    alert("Wrong hours-per-week Input, Should be Less than or Equal to 99");
+    return false;
+  }
+}
+
+</script>
+</body>
+</html>
