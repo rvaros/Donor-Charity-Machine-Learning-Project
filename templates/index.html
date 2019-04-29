@@ -80,7 +80,7 @@
       <option value="13">13</option>
       <option value="14">14</option>
       <option value="15">15</option>
-      <option value="16">16</option>
+      <option value="16">16+</option>
     </select>    
     <br>
     <label for="marital-status"><strong>Marital Status</strong></label>
@@ -198,19 +198,19 @@ function myFunction() {
   i = document.getElementById("hours-per-week").value;
   // Set the limitation
   if (x > 110) {
-    alert("Wrong Age Input, Should be Less than or Equal to 110");
+    alert("Please enter an age less than 110.");
     return false;
   }
   if (y > 41310) {
-    alert("Wrong Investment-Gain Input, Should be Less than or Equal to 41310");
+    alert("Please enter Investment Gain with value of less than or equal to 41310.");
     return false;
   }
   if (z > 4356) {
-    alert("Wrong Investment-Loss Input, Should be Less than or Equal to 4356");
+    alert("Please enter Investment Loss with value of less than or equal to 4356.");
     return false;
   }
   if (i > 99) {
-    alert("Wrong hours-per-week Input, Should be Less than or Equal to 99");
+    alert("Please enter work hours per week with a value less than or equal to 99.");
     return false;
   }
 }
